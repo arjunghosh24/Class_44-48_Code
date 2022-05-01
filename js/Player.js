@@ -60,6 +60,8 @@ class Player
         var bullet = new Bullet(playerPos.x + dir.x * 35, playerPos.y + dir.y * 35, 25, options);
         Matter.Body.setVelocity(bullet.body, Matter.Vector.create(dir.x * 40.0, dir.y * 40.0));
         this.bullets.push(bullet);
+        gunSound.setVolume(0.075);
+        gunSound.play();
     }
 
     DisplayBullets()

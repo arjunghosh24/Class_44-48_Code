@@ -39,10 +39,6 @@ class Application
         {
             this.state = 1;
         }
-        if(frameCount % 6 == 0)
-        {
-            this.player.Shoot();
-        }
     }
 
     ResetGame()
@@ -73,5 +69,10 @@ class Application
         {
             this.ResetGame();
         }
+    }
+
+    HandleMousePressed()
+    {
+        this.player.Shoot();
     }
 }

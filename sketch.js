@@ -4,10 +4,12 @@ const Bodies = Matter.Bodies;
 
 var app;
 var bgImg;
+var gunSound;
 
 function preload() 
 {
 	bgImg = loadImage("assets/images/Background.jpg");
+	gunSound = loadSound("assets/sound_effects/GunShot.mp3");
 }
 
 function setup() 
@@ -32,4 +34,9 @@ function draw()
 	{
 		app.End();
 	}
+}
+
+function mousePressed()
+{
+	app.HandleMousePressed();
 }
