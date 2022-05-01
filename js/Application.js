@@ -73,6 +73,9 @@ class Application
 
     HandleMousePressed()
     {
-        this.player.Shoot();
+        if(this.state == 0)
+        {
+            this.player.Shoot();
+        }
     }
 }
